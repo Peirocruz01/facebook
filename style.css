@@ -218,8 +218,9 @@ input::placeholder{
   }
 
   .mob-logo{
-    padding-left: 10%;
+    margin-left: 20%;
   }
+  
   .right{
     border-radius: 0;
   }
