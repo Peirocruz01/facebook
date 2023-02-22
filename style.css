@@ -1,0 +1,292 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+  --lap-background: rgb(241, 242, 246);
+  --lap-log: rgb(24, 120, 243);
+  --create: rgb(64, 182, 40);
+  --facebook: rgb(74, 129, 191);
+  --mob-background: rgb(255, 255, 255);
+  --mob-log: rgb(245, 246, 248);
+  --border: rgb(231, 233, 236);
+}
+
+.header, .mob-logo, .or, .down-info2{
+  display: none;
+}
+
+.container{
+  background: var(--lap-background);
+  height: 100vh;
+  width: 100vw;
+  padding-top: 10%;
+}
+
+.wrapper{
+  padding: 0 10%;
+}
+
+.page{
+  display: grid;
+  grid-template-columns: 47.5% 5% 47.5%;
+  gap: 1rem;
+}
+
+.left{
+  padding-top: 10%;
+}
+
+.lap-logo{
+  margin-bottom: 0.5rem;
+  width: 60%;
+}
+
+.left p{
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: rgb(0, 0, 0);
+}
+
+.right{
+  padding: 0.5rem;
+  align-items: center;
+  text-align: center;
+  border-radius: 30px;
+  width: 90%;
+}
+
+.up{
+  background: var(--mob-background);
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+input{
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  width: 90%;
+  padding: 15px;
+  margin-top: 1rem;
+}
+
+input:hover{
+  border: 1px solid var(--facebook)
+}
+
+input::placeholder{
+  color: rgb(185, 185, 185);
+  font-size: 18px;
+}
+
+.log{
+  background: var(--lap-log);
+  border-radius: 5px;
+  width: 90%;
+  padding: 15px;
+  margin-top: 1rem;
+  color: var(--mob-background);
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.pass{
+  color: var(--facebook);
+  font-weight: 500;
+  padding: 15px 0;
+  border-bottom: 1.5px solid var(--border);
+  margin: 0 1rem 1.3rem;
+  align-items: center;
+}
+
+.create{
+  background: var(--create);
+  color: var(--mob-background);
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+
+.down{
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+.down span{
+  font-weight: bold;
+}
+
+.down-info1 img{
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px){
+  
+
+  .container{
+    height: 100%;
+    padding: 15% 0;
+  }
+  
+  .wrapper{
+    padding: 0 7%;
+  }
+
+  .page{
+    grid-template-columns: 47.5% 5% 47.5%;
+  }
+  
+  .left{
+    padding-top: 15%;
+  }
+  
+  .lap-logo{
+    margin-bottom: 0.5rem;
+    width: 70%;
+  }
+  
+  .left p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: rgb(78, 77, 77);
+  }
+
+  input::placeholder{
+    font-size: 14px;
+  }
+
+  .create{
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  .down{
+    font-size: 14px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .lap-logo, .down, .left p, .down-info1{
+    display: none;
+  }
+
+  .mob-logo, .down-info2{
+    display: initial;
+  }
+
+  .container{
+    background: var(--mob-background);
+    height: 100vh;
+    width: 100vw;
+    padding-top: 5%;
+    margin: 0;
+  }
+
+  .header{
+    margin: 0;
+    width: 100%;
+  }
+
+  .wrapper{
+    padding: 0;
+    width: 100%;
+  }
+
+  .page{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .left{
+    padding-top: 0;
+  }
+
+  .lap-logo{
+    margin-left: 20%;
+  }
+  .right{
+    border-radius: 0;
+  }
+
+  .up{
+    background: var(--mob-background);
+    box-shadow: none;
+    padding-left: 5%;
+  }
+  
+  input{
+    background: var(--mob-log);
+    width: 95%;
+    padding: 10px;
+  }
+
+  input:hover{
+    border: 1px solid rgb(185, 185, 185)
+  }
+  
+  input::placeholder{
+    color: rgb(116, 112, 112);
+    font-size: 12px;
+  }
+
+  .log{
+    width: 95%;
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  .pass{
+    color: var(--lap-log);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 12px;
+  }
+
+  .or{
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 12px;
+  }
+
+  .create{
+    background: var(--mob-background);
+    color: initial;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 2rem;
+    width: 80%;
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+  }
+
+  .down-info2{
+   width: 50%;
+  }
+
+  .lang{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+  }
+
+  li{
+    color: var(--facebook);
+  }
+
+}
